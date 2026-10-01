@@ -1,0 +1,21 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: mana-community-parking-test
+  datasource:
+    url: jdbc:h2:mem:parkingdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+
+app:
+  jwt:
+    secret: dGhpcy1pcy1hLXZlcnktc2VjdXJlLWFuZC1sb25nLXNlY3JldC1rZXktZm9yLW1hbmEtY29tbXVuaXR5LXNlcnZpY2Vz
+    expiration-ms: 3600000
